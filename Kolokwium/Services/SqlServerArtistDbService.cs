@@ -22,7 +22,8 @@ namespace Kolokwium.Services
             var db = new ArtistDbContext();
 
             var artist = db.Artists
-                .Where(a => a.IdArtist == id);
+                .Where(a => a.IdArtist == id)
+                .ToList();
                     
 
             return artist;
